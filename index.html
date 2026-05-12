@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BÁO CÁO – Công tác Chuẩn bị Phòng, Chống Thiên Tai 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --red: #8B1A1A;
+    --red-bright: #C0392B;
+    --red-light: #e74c3c;
+    --dark: #1a1a1a;
+    --mid: #2d2d2d;
+    --grey: #4a4a4a;
+    --light-grey: #e8e8e8;
+    --bg: #f2f2f0;
+    --white: #ffffff;
+    --border: #c0392b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ─── CIRCUIT PATTERN ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(139,26,26,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139,26,26,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1e1e1e 40%, #2a0808 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(192,57,43,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(192,57,43,0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,26,26,0.15) 0%, transparent 70%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 80px 24px 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(192,57,43,0.2);
+    border: 1px solid rgba(192,57,43,0.5);
+    padding: 6px 14px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #e74c3c;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #e74c3c;
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--red-light); }
+
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stat-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,57,43,0.4);
+    border-left: 3px solid var(--red-bright);
+    padding: 16px 20px;
+    min-width: 180px;
+  }
+
+  .stat-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--red-light);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section { padding: 64px 0; }
+  .section:nth-child(even) { background: rgba(255,255,255,0.6); }
+
+  .sec-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .sec-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(139,26,26,0.12);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .sec-title-wrap { border-left: 4px solid var(--red-bright); padding-left: 16px; }
+
+  .sec-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red-bright);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .sec-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+
+  /* ─── SECTION 1: ĐẶC ĐIỂM ─── */
+  .disaster-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .disaster-card {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    border-top: 3px solid var(--red-bright);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .disaster-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(192,57,43,0.05);
+  }
+
+  .card-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+
+  .card-body {
+    font-size: 14px;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+
+  .highlight-box {
+    background: rgba(192,57,43,0.08);
+    border-left: 3px solid var(--red-bright);
+    padding: 8px 12px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--red);
+    font-style: italic;
+  }
+
+  /* ─── SECTION 2: HẠ TẦNG ─── */
+  .infra-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .infra-card {
+    background: var(--dark);
+    color: white;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .infra-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--red-bright), transparent);
+  }
+
+  .infra-card-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+
+  .infra-card-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .infra-list { list-style: none; }
+  .infra-list li {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+  .infra-list li::before { content: '›'; color: var(--red-light); flex-shrink: 0; margin-top: 1px; }
+
+  /* ─── PERSONNEL TABLE ─── */
+  .table-wrap {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    overflow: hidden;
+  }
+
+  .table-head {
+    background: var(--red);
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    padding: 12px 16px;
+  }
+
+  .table-head span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--light-grey);
+    align-items: start;
+  }
+
+  .table-row:nth-child(even) { background: rgba(139,26,26,0.03); }
+
+  .table-row span {
+    font-size: 13px;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+
+  .table-row .col-role { font-weight: 600; color: var(--red); }
+
+  /* ─── SECTION 3: PHƯƠNG ÁN MPĐ ─── */
+  .protocol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .protocol-card {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .protocol-header {
+    background: linear-gradient(90deg, var(--dark), #333);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .protocol-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.08);
+    padding: 2px 8px;
+  }
+
+  .protocol-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+  }
+
+  .protocol-icon { font-size: 24px; }
+
+  .protocol-body { padding: 20px; }
+
+  .detail-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    align-items: start;
+  }
+
+  .detail-key {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-top: 2px;
+  }
+
+  .detail-val {
+    font-size: 13px;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  .detail-val strong { color: var(--dark); }
+
+  /* ─── SECTION 4: KẾ HOẠCH TRIỂN KHAI ─── */
+  .deploy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+  .deploy-card {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    border-bottom: 3px solid var(--red-bright);
+    padding: 24px;
+  }
+
+  .deploy-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgba(192,57,43,0.1);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .deploy-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .deploy-body { font-size: 13px; color: var(--grey); line-height: 1.7; }
+
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(192,57,43,0.1);
+    border: 1px solid rgba(192,57,43,0.25);
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── SECTION 5: ĐIỀU KIỆN ─── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .big-stat {
+    background: var(--dark);
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .big-stat::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--red-bright);
+  }
+
+  .big-stat-icon { font-size: 28px; margin-bottom: 12px; }
+  .big-stat-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--red-light);
+    line-height: 1;
+  }
+  .big-stat-unit {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-left: 4px;
+  }
+  .big-stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+
+  /* needs table */
+  .needs-table { width: 100%; border-collapse: collapse; background: var(--white); }
+  .needs-table th {
+    background: var(--red);
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    padding: 12px 16px;
+    letter-spacing: 0.5px;
+  }
+  .needs-table td {
+    padding: 11px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--light-grey);
+    color: var(--dark);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .needs-table tr:nth-child(even) td { background: rgba(139,26,26,0.03); }
+  .needs-table td:first-child { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+  .needs-table td .tbl-icon { font-size: 18px; flex-shrink: 0; }
+  .val-cell { color: var(--red); font-style: italic; }
+  .annex-cell { color: var(--grey); font-size: 12px; }
+
+  /* ─── SECTION 6: NOC ─── */
+  .noc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+  .noc-card {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    overflow: hidden;
+  }
+
+  .noc-head {
+    background: var(--red);
+    padding: 14px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .noc-body { padding: 20px; }
+  .noc-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .noc-dot {
+    width: 7px; height: 7px;
+    background: var(--red-bright);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .noc-text { font-size: 13px; color: var(--dark); line-height: 1.6; }
+  .noc-text strong { color: var(--red); }
+
+  .progress-wrap { margin-bottom: 16px; }
+  .progress-label {
+    font-size: 12px;
+    color: var(--grey);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .progress-label span { font-weight: 700; color: var(--red); }
+  .progress-bar {
+    height: 10px;
+    background: var(--light-grey);
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red), var(--red-light));
+    position: relative;
+  }
+
+  .status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-grey);
+    font-size: 13px;
+  }
+  .status-item:last-child { border: none; }
+  .status-ok { color: #27ae60; font-weight: 600; font-size: 11px; background: rgba(39,174,96,0.1); padding: 2px 8px; }
+  .status-warn { color: #e67e22; font-weight: 600; font-size: 11px; background: rgba(230,126,34,0.1); padding: 2px 8px; }
+  .status-no { color: #c0392b; font-weight: 600; font-size: 11px; background: rgba(192,57,43,0.1); padding: 2px 8px; }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.4);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--red-bright), transparent);
+    margin-bottom: 24px;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--red-bright), transparent);
+    margin: 0;
+    opacity: 0.4;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up { animation: fadeUp 0.6s ease forwards; }
+  .delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .delay-2 { animation-delay: 0.2s; opacity: 0; }
+  .delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: row; flex-wrap: wrap; }
+    .disaster-grid, .protocol-grid, .noc-grid { grid-template-columns: 1fr; }
+    .infra-grid, .deploy-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .infra-grid, .deploy-grid, .stats-row { grid-template-columns: 1fr; }
+    .table-head, .table-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Hệ thống đang hoạt động · 2026</div>
+      <h1 class="fade-up">BÁO CÁO<br><span>Phòng, Chống</span><br>Thiên Tai 2026</h1>
+      <p class="hero-sub fade-up delay-1">Công tác chuẩn bị ứng cứu thông tin liên lạc, đảm bảo hạ tầng mạng lưới viễn thông Viettel trước và trong mùa bão lũ 2026.</p>
+    </div>
+    <div class="hero-stats fade-up delay-2">
+      <div class="stat-box">
+        <div class="stat-num">80</div>
+        <div class="stat-label">Máy phát điện pool</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">349</div>
+        <div class="stat-label">Tuyến cáp quang</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">200</div>
+        <div class="stat-label">Tổ ắc quy valy</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ══════════════════ 1. ĐẶC ĐIỂM THIÊN TAI ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-num">01</div>
+      <div class="sec-title-wrap">
+        <div class="sec-tag">Phân tích rủi ro</div>
+        <div class="sec-title">Đặc điểm Hình thái Thiên tai tại Cụm</div>
+      </div>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card">
+        <div class="card-icon">🌀</div>
+        <div class="card-title">1. Hình thái liên quan Bão</div>
+        <div class="card-body">
+          Mất điện diện rộng vào thời điểm nắng nóng từ <strong>tháng 6 đến tháng 7</strong> hàng năm. Ảnh hưởng ATNĐ/bão lũ từ <strong>tháng 8 đến tháng 12</strong> hàng năm.
+        </div>
+        <div class="highlight-box">⚠ Xác định cụ thể khu vực ảnh hưởng, số trạm bị tác động và thời gian mất điện trung bình/dài nhất.</div>
+      </div>
+      <div class="disaster-card">
+        <div class="card-icon">🌊</div>
+        <div class="card-title">2. Hình thái liên quan Ngập lụt / Chia cắt</div>
+        <div class="card-body">
+          Thời gian mất điện thường kéo dài do chất lượng điện lưới tại các khu vực bị ngập. Ảnh hưởng ngập có thể kéo dài nhiều ngày, chia cắt đường tiếp cận trạm.
+        </div>
+        <div class="highlight-box">⚠ Các nhóm trạm đặc thù của cụm (theo PA UCTT mức tỉnh: từ 9.1 → 9.5) cần được xác định ưu tiên ứng cứu.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════ 2. HẠ TẦNG & NHÂN SỰ ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-num">02</div>
+      <div class="sec-title-wrap">
+        <div class="sec-tag">Hạ tầng & Nhân sự</div>
+        <div class="sec-title">Thông tin Mạng lưới & Phương án UCTT Chung</div>
+      </div>
+    </div>
+
+    <div class="infra-grid">
+      <div class="infra-card">
+        <div class="infra-card-label">Danh sách trạm</div>
+        <div class="infra-card-title">1. Trạm cần UCTT trong Bão</div>
+        <ul class="infra-list">
+          <li>Danh sách bố trí MPĐ pool theo cụm quản lý</li>
+          <li>Ắc quy valy các nhóm trạm phân bổ theo từng cấp bão</li>
+          <li>Trạm đặc thù cần ưu tiên (ngập sâu, chia cắt giao thông)</li>
+        </ul>
+      </div>
+      <div class="infra-card">
+        <div class="infra-card-label">Phân bổ thiết bị</div>
+        <div class="infra-card-title">2. MPĐ & Ắc quy Valy theo Nhóm Trạm</div>
+        <ul class="infra-list">
+          <li>MPĐ pool: 80 máy lưu động tập kết tại kho huyện</li>
+          <li>MPĐ cố định: Sân tòa nhà 500m² — chứa 80 MPĐ</li>
+          <li>Tập kết cụm: Hội An – Biện Bản tại toà nhà</li>
+        </ul>
+      </div>
+      <div class="infra-card">
+        <div class="infra-card-label">Nhân sự ém quân</div>
+        <div class="infra-card-title">3. Phương án bố trí Nhân sự</div>
+        <ul class="infra-list">
+          <li>Bão dưới cấp 10 (75%): ém quân theo tỷ lệ nhu cầu</li>
+          <li>Bão dưới cấp 12 (85%): tăng cường nhân lực hỗ trợ</li>
+          <li>Bão trên cấp 12 (100%): huy động toàn bộ nhân sự</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-head">
+        <span>Nhân sự</span>
+        <span>Nhiệm vụ trước & trong bão</span>
+        <span>Quan điểm ém quân vận hành MPĐ</span>
+      </div>
+      <div class="table-row">
+        <span class="col-role">FT nhà trạm</span>
+        <span>Trước bão: rải xăng dầu/MPĐ PA1&2, kiểm tra các điều kiện đảm bảo trạm. Trong bão: ém quân tại tổng trạm/trạm trục. Sau bão: xử lý lỗi MPĐ, ATS, kiểm soát xăng.</span>
+        <span>1 người/1 trạm. Trạm có ATS và MPĐ cố định: không ém quân (chỉ bão &lt;cấp 10)</span>
+      </div>
+      <div class="table-row">
+        <span class="col-role">FT dây máy / Đội hỗ trợ CNCT</span>
+        <span>Ém quân tại trạm. Mua nhiên liệu, chạy máy nổ.</span>
+        <span>Phối hợp với VTT, VTPCTV, CMNCTV thuê ngoài theo kế hoạch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════ 3. PHƯƠNG ÁN MPĐ ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-num">03</div>
+      <div class="sec-title-wrap">
+        <div class="sec-tag">Thiết bị – Giao thức</div>
+        <div class="sec-title">Tiếp nhận & Phân bổ MPĐ Pool, Ắc quy Valy</div>
+      </div>
+    </div>
+
+    <div class="protocol-grid">
+      <div class="protocol-card">
+        <div class="protocol-header">
+          <span class="protocol-icon">⚙️</span>
+          <div>
+            <div class="protocol-tag">Protocol Card 1</div>
+            <div class="protocol-name">MPĐ Pool — Phân phối & Kiểm soát</div>
+          </div>
+        </div>
+        <div class="protocol-body">
+          <div class="detail-row">
+            <div class="detail-key">Phương án</div>
+            <div class="detail-val">Test MPĐ pool để đưa lên trạm. Kiểm soát kết quả sửa chữa MPĐ tại kho tập trung, cụm và đội sửa chữa dạo.</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-key">Khối lượng</div>
+            <div class="detail-val"><strong>Tổng: 80 máy pool</strong></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-key">Kết quả</div>
+            <div class="detail-val">Bố trí 3 đội test. PA kiểm tra: đề nổ, đo điện áp đầu ra, mức nhớt, kiểm tra đồng bộ ắc quy đề, dây AC. Đang test cuốn chiều — sắp xếp xe đưa xuống cụm, cập nhật BC ngày.</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-key">Ghi chú</div>
+            <div class="detail-val">Nhân sự: ChungIt10 – 0983941899</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="protocol-card">
+        <div class="protocol-header">
+          <span class="protocol-icon">🔌</span>
+          <div>
+            <div class="protocol-tag">Protocol Card 2</div>
+            <div class="protocol-name">Vật tư Đồng bộ — Dây AC, Phích cắm</div>
+          </div>
+        </div>
+        <div class="protocol-body">
+          <div class="detail-row">
+            <div class="detail-key">Phương án</div>
+            <div class="detail-val">Đảm bảo tính đồng bộ MPĐ pool: dây AC, phích cắm, ắc quy đề — hiện trạng ai đảm bảo, bao giờ xong.</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-key">Khối lượng</div>
+            <div class="detail-val"><strong>Tổng: 80 máy pool</strong></div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-key">Kết quả</div>
+            <div class="detail-val">80/80 máy tốt / 0 máy hỏng. Ngày 27/11: hoàn thành đánh giá 80 MPĐ.</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-key">Đề xuất</div>
+            <div class="detail-val">CĐ CNCT ứng tiền mua cho MPĐ thiếu dây AC, phích cắm, accu trước 28/11.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════ 4. KẾ HOẠCH TRIỂN KHAI ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-num">04</div>
+      <div class="sec-title-wrap">
+        <div class="sec-tag">Triển khai</div>
+        <div class="sec-title">Phương án & Kế hoạch Triển khai Cụ thể</div>
+      </div>
+    </div>
+
+    <div class="deploy-grid">
+      <div class="deploy-card">
+        <div class="deploy-num">PA3</div>
+        <div class="deploy-title">Đảm bảo Mặt bằng & Vật tư Sửa chữa MPĐ</div>
+        <div class="deploy-body">Kho tỉnh tập trung và tại các cụm. 100% vị trí có máy nổ theo PA PCTT. Điện tích kho tập kết trung: sân 500m², chứa 80 MPĐ — cụng lực sửa 05 đội lúc 20 máy nổ.</div>
+        <div class="meta-chip">50 máy lưu động tại kho huyện</div>
+      </div>
+      <div class="deploy-card">
+        <div class="deploy-num">PA4</div>
+        <div class="deploy-title">Đảm bảo Tính sẵn sàng Ắc quy Valy</div>
+        <div class="deploy-body">Tổng nhận 200 tổ ắc quy. Mỗi cụm bố trí 1 xe kho CN nhận cùng vật tư. Đội nạp ắc quy: 2 nhân sự/đội. Trạm sạc: 02 tổ đặt tại QNM8004 và QNM0132.</div>
+        <div class="meta-chip">200 tổ ắc quy valy</div>
+      </div>
+      <div class="deploy-card">
+        <div class="deploy-num">PA5</div>
+        <div class="deploy-title">Rải & Đấu nối Máy phát đến Trạm</div>
+        <div class="deploy-body">Mục tiêu: rải và đấu nối xong máy phát/accu ra trạm, khôi phục dịch vụ trong 1 buổi. Tổng 80 máy → cần 4 xe tải 1,5 tấn để đưa máy xuống huyện.</div>
+        <div class="meta-chip">80 máy phát lưu động</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════ 5. ĐIỀU KIỆN ĐẢM BẢO ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-num">05</div>
+      <div class="sec-title-wrap">
+        <div class="sec-tag">Tổng hợp nguồn lực</div>
+        <div class="sec-title">Điều kiện Đảm bảo — Hiện có & Cần bổ sung</div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="big-stat">
+        <div class="big-stat-icon">🔧</div>
+        <div><span class="big-stat-num">2</span><span class="big-stat-unit">bộ</span></div>
+        <div class="big-stat-label">Máy hàn</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-icon">📡</div>
+        <div><span class="big-stat-num">82</span></div>
+        <div class="big-stat-label">Kênh truyền</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-icon">⛽</div>
+        <div><span class="big-stat-num">250</span><span class="big-stat-unit">can</span></div>
+        <div class="big-stat-label">Can xăng</div>
+      </div>
+      <div class="big-stat">
+        <div class="big-stat-icon">🔌</div>
+        <div><span class="big-stat-num">349</span></div>
+        <div class="big-stat-label">Tuyến cáp quang</div>
+      </div>
+    </div>
+
+    <table class="needs-table">
+      <thead>
+        <tr>
+          <th style="width:32%">Điều kiện đảm bảo</th>
+          <th style="width:40%">Kết quả & cách tính toán</th>
+          <th style="width:28%">Phụ lục tham chiếu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tbl-icon">⚙️</span> MPĐ pool cần bổ sung</td>
+          <td class="val-cell">... máy (theo tính toán phụ lục)</td>
+          <td class="annex-cell">Danh sách bố trí MPĐ pool</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🔋</span> ATS cần bổ sung</td>
+          <td class="val-cell">...ats</td>
+          <td class="annex-cell">Danh sách bố trí ATS</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🪫</span> Ắc quy valy cần bổ sung</td>
+          <td class="val-cell">...tổ ắc quy</td>
+          <td class="annex-cell">Danh sách bố trí ắc quy valy</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🔌</span> Trạm sạc ắc quy</td>
+          <td class="val-cell">48 tổ tại 02 trạm sạc QNM8004 và QNM0132</td>
+          <td class="annex-cell">Danh sách bố trí ắc quy valy</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">👥</span> Đội chuyển & đấu nối MPĐ</td>
+          <td>2 đội = 8 người</td>
+          <td class="annex-cell">DS nhân sự đội đấu nối MPĐ + phương tiện rải máy</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🚛</span> Xe tải chuyển MPĐ 1.5 tấn</td>
+          <td class="val-cell">05 xe (vận chuyển máy PA4 sau bão)</td>
+          <td class="annex-cell">Danh sách nhà xe kèm số điện thoại</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🏗️</span> Bộ giàn giáo nâng máy nổ</td>
+          <td>10 bộ</td>
+          <td class="annex-cell">—</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🔩</span> Đội sửa chữa MPĐ lưu động</td>
+          <td class="val-cell">02 đội: 01 sửa tại kho cụm + 01 sửa lưu động</td>
+          <td class="annex-cell">Danh sách nhân sự các đội</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">📡</span> Trạm bổ sung truyền dẫn X</td>
+          <td>2 trạm chia cắt (QNM0811, QNM0481)</td>
+          <td class="annex-cell">—</td>
+        </tr>
+        <tr>
+          <td><span class="tbl-icon">🔗</span> Trạm cần hạ tải trước bão</td>
+          <td>QNM0275, QNM0025, QNM0278, QNM0482, QNM0811</td>
+          <td class="annex-cell">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════ 6. NOC ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header">
+      <div class="sec-num">06</div>
+      <div class="sec-title-wrap">
+        <div class="sec-tag">Vận hành & Giám sát</div>
+        <div class="sec-title">Phương án Đảm bảo NOC Mini & Công cụ Dụng cụ</div>
+      </div>
+    </div>
+
+    <div class="noc-grid">
+      <!-- NOC Conditions -->
+      <div class="noc-card">
+        <div class="noc-head">🖥 NOC Conditions</div>
+        <div class="noc-body">
+          <div style="font-size:12px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">Điều kiện đảm bảo SCH Viettel tỉnh cũ & NOC Mini</div>
+          <div class="noc-item">
+            <div class="noc-dot"></div>
+            <div class="noc-text"><strong>Truyền dẫn:</strong> Tối thiểu 1+1 về cáp và trong đó có tối thiểu 1 cáp kiên cố về node trục (cáp ngầm hoặc OPGW)</div>
+          </div>
+          <div class="noc-item">
+            <div class="noc-dot"></div>
+            <div class="noc-text"><strong>Cơ điện:</strong> Đảm bảo MFĐ cố định/Lưu động đặt tại trạm. Lưu động không đặt tại trạm hoặc thời gian xả lớn hơn 3h.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Material Reserves -->
+      <div class="noc-card">
+        <div class="noc-head">📦 Material Reserves</div>
+        <div class="noc-body">
+          <div style="font-size:12px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">Vật tư dự phòng ƯCTT</div>
+          <div class="progress-wrap">
+            <div class="progress-label">Cáp quang vòng 30km / định mức 25km <span>96%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:96%"></div></div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">Cáp quang CĐBR 23km / định mức 19km <span>121%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">Măng xông dự phòng 500 cái / định mức 500 <span>100%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Equipment -->
+      <div class="noc-card">
+        <div class="noc-head">🛠 Tools & Equipment</div>
+        <div class="noc-body">
+          <div style="font-size:12px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;">Đảm bảo công cụ, dụng cụ</div>
+          <div class="status-item">
+            <span>Phần mềm PCTT VTNet</span>
+            <span class="status-ok">✓ ĐẢM BẢO</span>
+          </div>
+          <div class="status-item">
+            <span>Máy hàn, máy đo</span>
+            <span class="status-ok">✓ 2 BỘ</span>
+          </div>
+          <div class="status-item">
+            <span>Điện thoại vệ tinh</span>
+            <span class="status-no">✗ KHÔNG CÓ</span>
+          </div>
+          <div class="status-item">
+            <span>Bộ đàm cầm tay</span>
+            <span class="status-no">✗ KHÔNG CÓ</span>
+          </div>
+          <div class="status-item">
+            <span>Cáp quang dã chiến</span>
+            <span class="status-ok">✓ 2 KM</span>
+          </div>
+          <div class="status-item">
+            <span>Truyền dẫn X</span>
+            <span class="status-no">✗ KHÔNG CÓ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="footer">
+  <div>BÁO CÁO CÔNG TÁC CHUẨN BỊ PHÒNG, CHỐNG THIÊN TAI 2026 &nbsp;·&nbsp; VIETTEL &nbsp;·&nbsp; BÍ MẬT NỘI BỘ</div>
+  <div style="margin-top:8px;font-size:10px;opacity:0.5;">Tài liệu này chỉ dành cho nội bộ. Không phát tán ra bên ngoài.</div>
+</footer>
+
+</body>
+</html>
